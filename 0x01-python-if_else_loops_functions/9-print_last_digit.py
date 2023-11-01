@@ -7,5 +7,5 @@ def print_last_digit(number):
 
      #   print(last)
     last = abs(number) % 10
-    print(last)
+    print("{}".format(last), end="")
     return last
