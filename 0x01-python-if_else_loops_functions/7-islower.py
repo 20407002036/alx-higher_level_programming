@@ -1,4 +1,4 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 def islower(c): #This is the prototype Given
     #The function will be called from the main method,
     #Then if input is C it will return true else false
