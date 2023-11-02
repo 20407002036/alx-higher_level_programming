@@ -1,16 +1,9 @@
 #!/usr/bin/python3
-import sys
-
-if __name__ != "__main__":
-    exit()
-    #Don't worry I also  hope that it prints all those numbers
-argc = len(sys.argv) - 1
-
-i = 0
-result = 0
-for arg in sys.argv:
-    if i != 0:
-        result += int(arg)
-    else:
-        i += 1
-print("{:d}".format(result))
+if __name__ == "__main__":
+    #it add an infinite number trust me when I say that
+    import sys
+    result = 0
+    for arg in sys.argv:
+        if arg != sys.argv[0]:
+            result += int(arg)
+    print(result)
