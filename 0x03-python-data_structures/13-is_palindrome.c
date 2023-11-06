@@ -6,6 +6,7 @@ int list_equiv(listint_t *l1, listint_t *l2);
 
 /**
  * is_palindrome - checks if a linked list is a palindrome
+ *
  * @head: double pointer to the head of the linked list
  *
  * Return: 0 (not palindrome) 1 (is palindrome)
@@ -45,8 +46,11 @@ int is_palindrome(listint_t **head)
 
 /**
  * list_equiv - checks if two linked lists contain identical data and are
+ *
  * the same length as each other
+ *
  * @l1: list one to compare to list two
+ *
  * @l2: list two to compare to list one
  *
  * Return: 1 (equivalent) 0 (not equal)
@@ -67,6 +71,7 @@ int list_equiv(listint_t *l1, listint_t *l2)
 
 /**
  * reverse_list - reverses a linked list
+ *
  * @head: double pointer to head of linked list so we can modify it
  *
  * Return: always void, modifies head itself.
