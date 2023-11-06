@@ -1,11 +1,6 @@
 #!/usr/bin/python3
-
-
 def add_tuple(tuple_a=(), tuple_b=()):
-    """
-    adds the first two elements of two tuples together
-    and returns the result
-    """
+    # adds the first two elements of two tuples together and returns the result
     ta_len = len(tuple_a)
     tb_len = len(tuple_b)
     new_tup = ()
