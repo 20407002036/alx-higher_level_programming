@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 
+
 def safe_print_division(a, b):
-    result = 0 
-
+    """
+    divides two integers and prints the result
+    catches divide by zero exception
+    """
     try:
-        result = a / b
-       # print("{}".format(result))
-        return result
-
-    except ZeroDivisionError:
-        return None
-
+        res = a / b
+    except:
+        res = None
     finally:
-        print("{}".format(int(result)))
-       # return result
+        print("Inside result: {}".format(res))
+    return res
