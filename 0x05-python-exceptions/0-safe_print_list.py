@@ -10,7 +10,10 @@ def safe_print_list(my_list=[], x=0):
             printed_elements += 1
 
     except IndexError:
-        pass  # Handle the IndexError exception (when the index is out of range)
+        pass
+    """ Handle the IndexError exception
+          (when the index is out of range)
+    """
 
     finally:
         print()  # Print a newline after all elements
