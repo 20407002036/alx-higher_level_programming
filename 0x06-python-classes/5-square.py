@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""Class Definition"""
+
 
 class Square:
     """
     class square that has attributes:
         size
-    
     """
     def __init__(self, size=0):
         """
@@ -38,7 +39,7 @@ class Square:
         """
         prints the square using '#' characters
         Use the for loops with the max values as the
-        self.__size 
+        self.__size
         """
         i = 0
         for i in range(0, self.__size):

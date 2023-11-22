@@ -1,15 +1,16 @@
 #!/usr/bin/python3
+"""Class Definition"""
+
 
 class Square:
     """
     class square that has attributes:
         size
-    
     """
     def __init__(self, size=0):
         """
         initialization function for The square class
-        Notice the __validate_size Method, Private 
+        Notice the __validate_size Method, Private
         """
         if self.__validate_size(size):
             self.__size = size
