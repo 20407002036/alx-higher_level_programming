@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Class Definition
+"""
 
 class Rectangle():
     """rectangle class for storing rectangle data
