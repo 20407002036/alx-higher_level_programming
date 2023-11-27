@@ -2,6 +2,8 @@
 """
 module for calculation of n-queens problem
 """
+
+
 import sys
 
 
