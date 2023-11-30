@@ -1,11 +1,42 @@
 #!/usr/bin/python3
+"""
+Class Definition
+"""
 
 
 def add_integer(a, b=98):
     """
-    adds an integer
-    unit tests located in tests/0-add_integer.txt
-    checks for type errors
+   >>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(4, 10)
+14
+
+>>> add_integer(3, -10)
+-7
+
+>>> add_integer(3, "Hello")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer("Hello", 3)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(3.2, 3)
+6
+
+>>> add_integer(4.9, 4.8)
+8
+
+>>> add_integer(-4.9, -4.8)
+-8
+
+>>> add_integer("Hello", "World")
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
     """
     if not isinstance(a, int):
         if isinstance(a, float):
