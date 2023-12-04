@@ -2,18 +2,12 @@
 Test cases for the 7-base_geometry
 ==================================
 
->>> 
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg.BaseGeometry()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: 'BaseGeometry' object has no attribute 'BaseGeometry'
->>> 
->>> 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg=BaseGeometry()
 >>> bg.integer_validator("Custom", 12)
 >>> 
+
+
 >>> # value not int
 >>> bg.integer_validator("Name", None)
 Traceback (most recent call last):
@@ -21,6 +15,8 @@ Traceback (most recent call last):
   File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
     raise TypeError("{} must be an integer".format(name))
 TypeError: Name must be an integer
+
+
 >>> # value less than 0
 >>> bg.integer_validator("Name", -12)
 Traceback (most recent call last):
@@ -28,6 +24,8 @@ Traceback (most recent call last):
   File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 22, in integer_validator
     raise ValueError("{} must be greater than 0".format(name))
 ValueError: Name must be greater than 0
+
+
 >>> # provide value with float
 >>> bg.integer_validator("James", 3.14)
 Traceback (most recent call last):
@@ -35,6 +33,8 @@ Traceback (most recent call last):
   File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
     raise TypeError("{} must be an integer".format(name))
 TypeError: James must be an integer
+
+
 >>> # when value is 0
 >>> bg.integer_validator("Sam", 0)
 Traceback (most recent call last):
