@@ -2,20 +2,44 @@
 Test cases for the 7-base_geometry
 ==================================
 
+>>> 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> # assume value is string
 >>> bg.BaseGeometry()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-NameError: name 'bg' is not defined
->>> bg = BaseGeometry()
->>> bg.ineter_validator("Solo", "SOLO")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: 'BaseGeometry' object has no attribute 'ineter_validator'. Did you mean: 'integer_validator'?
->>> bg.integer_validator("Solo", "SOLO")
+AttributeError: 'BaseGeometry' object has no attribute 'BaseGeometry'
+>>> 
+>>> 
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg=BaseGeometry()
+>>> bg.integer_validator("Custom", 12)
+>>> 
+>>> # value not int
+>>> bg.integer_validator("Name", None)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
     raise TypeError("{} must be an integer".format(name))
-TypeError: Solo must be an integer
+TypeError: Name must be an integer
+>>> # value less than 0
+>>> bg.integer_validator("Name", -12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 22, in integer_validator
+    raise ValueError("{} must be greater than 0".format(name))
+ValueError: Name must be greater than 0
+>>> # provide value with float
+>>> bg.integer_validator("James", 3.14)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: James must be an integer
+>>> # when value is 0
+>>> bg.integer_validator("Sam", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/kyobenimaru/Developer/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 22, in integer_validator
+    raise ValueError("{} must be greater than 0".format(name))
+ValueError: Sam must be greater than 0
+>>> 
