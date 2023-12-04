@@ -16,4 +16,10 @@ NameError: name 'my_list' is not defined. Did you mean: 'MyList'?
 >>> my_list.print_sorted()
 [2, 7, 34]
 >>> 
+>>> 
+>>> my_list.append("ME")
+>>> print(my_list)
+[2, 34, 7, 'ME']
+>>> 
+
 
