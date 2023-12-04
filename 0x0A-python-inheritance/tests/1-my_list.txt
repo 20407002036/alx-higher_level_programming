@@ -22,4 +22,10 @@ NameError: name 'my_list' is not defined. Did you mean: 'MyList'?
 [2, 34, 7, 'ME']
 >>> 
 
+# Empty list 
 
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> 
