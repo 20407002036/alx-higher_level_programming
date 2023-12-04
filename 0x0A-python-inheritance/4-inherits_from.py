@@ -7,4 +7,11 @@ def inherits_from(obj, a_class):
     """
     Definition of the function
     """
-    return issubclass(type(obj), a_class)
+    NewClass = type(obj)
+
+    while NewClass is not object:
+        if NewClass == a_class:
+            return True
+        NewClass = NewClass.__base__
+
+    return False
