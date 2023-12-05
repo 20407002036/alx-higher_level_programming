@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module def
+"""
 
 
 def write_file(filename="", text=""):
