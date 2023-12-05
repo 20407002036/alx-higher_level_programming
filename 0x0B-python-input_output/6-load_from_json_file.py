@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""module for loading data from .json files
+"""
+module for loading data from .json files
 """
 
 

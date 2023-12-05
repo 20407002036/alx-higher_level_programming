@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""module for use in writing json strings to files
+"""
+module for use in writing json strings to files
 """
 
 
