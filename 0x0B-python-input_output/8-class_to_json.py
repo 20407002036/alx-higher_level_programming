@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Class Def of JSON
+"""
 
 
 def class_to_json(obj):
