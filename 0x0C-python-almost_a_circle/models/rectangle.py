@@ -28,6 +28,22 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """
+        Overriding the metho
+        it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        Eg [Rectabgle] (12) 2/1 - 4/6
+        """
+
+        builder = "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                   self.id,
+                                                   self.x,
+                                                   self.y,
+                                                   self.width,
+                                                   self.height)
+        
+        return builder
+
 
     @property
     def width(self):
@@ -96,8 +112,42 @@ class Rectangle(Base):
     def display(self):
         """Method to print in stdout the rectabgle using #"""
 
-
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
+        for y_sp in range(0, self.y):
             print()
+
+        for i in range(0, self.height):
+            builder = ""
+            for x_sp in range(0,self.x):
+                builder += " "
+            for j in range(0, self.width):
+                builder += "#"
+            print(builder)
+
+    def update(self, *args, **kwargs):
+        """takes an *args argument and sets arguments respective
+            to instantiation function
+        """
+        if args is not None and len(args) > 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+        elif kwargs is not None:
+            for (key, value) in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value

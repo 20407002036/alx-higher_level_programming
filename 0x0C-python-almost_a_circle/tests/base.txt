@@ -11,6 +11,7 @@ BASE CLASS
 
 ============================================
 REACTANGLE CLASS
+    * Test for correct input handling
     * Tests the individual values are set(Setters):
         __width
         __height
