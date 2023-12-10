@@ -1,0 +1,33 @@
+===========================================
+I have used this file to give 
+
+===========================================
+BASE CLASS
+ * Test for correct assignment of Id
+ * Test if the __nb_objects resets if sequential btwn given
+    ids and those None
+
+
+
+============================================
+REACTANGLE CLASS
+    * Tests the individual values are set(Setters):
+        __width
+        __height
+        __x
+        __y
+    * Tests the individual values are gotten (Getters)
+        __width
+        __height
+        __x
+        __y
+    * Test for validation in the setters and getters
+        - If imput is integer
+        - If width and height are > 0
+        - If x and y are >= 0
+
+    * Test for correct ares retutn in area method
+    * Test if the Display is done corrcetly,
+        Check for the loops
+
+    
