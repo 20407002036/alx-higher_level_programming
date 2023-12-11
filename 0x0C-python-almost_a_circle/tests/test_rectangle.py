@@ -44,3 +44,50 @@ class TestRect(unittest.TestCase):
             n = Rectangle(0, 0)
         with self.assertRaises(ValueError):
             n = Rectangle(1, 1, -5, -2)
+
+    def test_update(self):
+        r = Rectangle(4, 5, 45)
+        r.update(500)
+        self.assertEqual(500, r.id)
+        r.update(500, 2)
+        self.assertEqual(2, r.width)
+        r.update(500, 2, 3)
+        self.assertEqual(3, r.height)
+        r.update(500, 2, 3, 4)
+        self.assertEqual(4, r.x)
+        r.update(500, 2, 3, 4, 5)
+        self.assertEqual(5, r.y)
+        r.update(500, 2, 3, 4, 5, 6, 7, 8)
+        self.assertEqual(5, r.y)
+
+
+    def test_kwarg_update(self):
+        r = Rectangle(4, 5, 0, 0, 33)
+        r.update(45, id=32, width=42)
+        self.assertEqual(45, r.id)
+        r.update(45, 10, 10, x=5, y=6)
+        self.assertEqual(0, r.x)
+        self.assertEqual(10, r.width)
+        self.assertEqual(45, r.id)
+        r.update(width=4)
+        self.assertEqual(4, r.width)
+        r.update(width=6, id=6, height=45)
+        self.assertEqual(6, r.width)
+        self.assertEqual(6, r.id)
+        self.assertEqual(45, r.height)
+        r.update(x=100, y=100)
+        self.assertEqual(6, r.id)
+        self.assertEqual(100, r.x)
+        self.assertEqual(100, r.y)
+
+    def test_dictionary(self):
+        """tests rectangle's to_dictionary method
+        """
+        r = Rectangle(4, 5, 6, 7, 33)
+        r_dict = r.to_dictionary()
+        self.assertEqual(r_dict['id'], 33)
+        self.assertEqual(r_dict['width'], 4)
+        self.assertEqual(r_dict['height'], 5)
+        self.assertEqual(r_dict['x'], 6)
+        self.assertEqual(r_dict['y'], 7)
+
