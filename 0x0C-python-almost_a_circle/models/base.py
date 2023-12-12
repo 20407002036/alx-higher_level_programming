@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-By Solomon 
+By Solomon
 Class Def
 """
 
 
 import turtle
+# import tkinter as Tk
 
 
 class Base():
@@ -18,17 +19,16 @@ class Base():
 
     __nb_objects = 0
 
-
     def __init__(self, id=None):
-       #__nb_objects = 0
-       # __nb_objects=__nb_objects+1
+        # __nb_objects = 0
+        # __nb_objects=__nb_objects+1
 
         if id is not None:
             self.id = id
 
         else:
             # __nb_objects = 0
-            Base.__nb_objects+=1
+            Base.__nb_objects += 1
 
             self.id = Base.__nb_objects
 
@@ -122,7 +122,7 @@ class Base():
         try:
             with open(cname + '.json', 'r', encoding='utf-8') as myFile:
                 text = myFile.read()
-        except:
+        except FileNotFoundError:
             return []
 
         inst_list = []
@@ -155,7 +155,7 @@ class Base():
         try:
             with open(cname + '.csv', 'r', encoding='utf-8') as myFile:
                 lines = myFile.readlines()
-        except:
+        except FileNotFoundError:
             return []
 
         inst_list = []

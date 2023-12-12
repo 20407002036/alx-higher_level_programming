@@ -14,8 +14,6 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
-
-
     def __str__(self):
         """
         Overriding the metho
@@ -23,13 +21,14 @@ class Square(Rectangle):
         Eg [Rectabgle] (12) 2/1 - 4/6
         """
 
-        builder = "[Square] ({}) {}/{} - {}".format(self.id,
-                                                   self.x,
-                                                   self.y,
-                                                   self.width)
-        
+        builder = "[Square] ({}) {}/{} - {}".format(
+            self.id,
+            self.x,
+            self.y,
+            self.width
+            )
+
         return builder
-    
 
     @property
     def size(self):
@@ -41,7 +40,6 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         self.width = value
         self.height = value
-
 
     def update(self, *args, **kwargs):
         """
