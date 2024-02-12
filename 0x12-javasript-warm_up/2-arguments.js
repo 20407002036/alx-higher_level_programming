@@ -1,13 +1,12 @@
 #!/usr/bin/node
 
-const array = process.argv;
-const number = array.length;
+const array = process.argv.length - 2;
 
-if (number == 0) {
+if (array === 0) {
   console.log("No arguement");
  }
-else if ( number == 1) {
-  console.log("Arguemeny found");
+else if ( array === 1) {
+  console.log("Arguement found");
  }
 else
     console.log("Arguments found");
