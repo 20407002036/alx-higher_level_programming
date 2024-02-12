@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class Def
+Class Definition entailing the whole process
 """
 
 

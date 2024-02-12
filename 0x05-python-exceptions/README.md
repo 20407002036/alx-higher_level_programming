@@ -2,11 +2,11 @@
 # Python
 
 
- By: Guillaume
- Weight: 1
- Project will start Nov 20, 2023 6:00 AM, must end by Nov 21, 2023 6:00 AM
- Checker will be released at Nov 20, 2023 12:00 PM
- An auto review will be launched at the deadline
+ * By: Guillaume
+ * Weight: 1
+ * Project will start Nov 20, 2023 6:00 AM, must end by Nov 21, 2023 6:00 AM
+ * Checker will be released at Nov 20, 2023 12:00 PM
+ * An auto review will be launched at the deadline
 Resources:
 
 
