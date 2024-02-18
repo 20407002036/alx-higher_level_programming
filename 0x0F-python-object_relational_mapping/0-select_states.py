@@ -7,6 +7,7 @@ if __name__ == "__main__":
     username, password, dbname = sys.argv[1:]
 
     # Connect to MySQL server
+    # MySqldb provides us with an intreface to interact with the server
     db = MySQLdb.connect(host='localhost',
                          port=3306,
                          user=username,
