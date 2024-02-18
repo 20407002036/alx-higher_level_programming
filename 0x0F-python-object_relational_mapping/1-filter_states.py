@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""_summary_
+    
+"""
 
 import MySQLdb
 import sys

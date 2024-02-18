@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""
+__Summary for the update
+"""
 import MySQLdb
 import sys
 
