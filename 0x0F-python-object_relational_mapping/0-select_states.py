@@ -3,6 +3,10 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """_summary_
+    This will act root file
+    By Solomon Kaniaru
+    """
     # Command line arguments: username, password, database name
     username, password, dbname = sys.argv[1:]
 
