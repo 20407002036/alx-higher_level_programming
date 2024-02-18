@@ -5,14 +5,14 @@ import sys
 
 if __name__ == "__main__":
     # Get the username, database and host from terminal
-    username,password,dbname= sys.argv[1:]
+    username, password, dbname= sys.argv[1:]
     
     # Connect to the server
-    db = MySQLdb.Connect(host ='localhost',
-                         port = 3306,
-                         user = username
-                         passwd = password,
-                         db = dbname)
+    db = MySQLdb.connect(host='localhost',
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=dbname)
     
     # create a cursor object
     cursor = db.cursor()
