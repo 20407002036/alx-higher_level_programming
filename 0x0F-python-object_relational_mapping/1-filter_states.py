@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     # Get the username, database and host from terminal
-    username, password, dbname= sys.argv[1:]
+    username, password, dbname = sys.argv[1:]
     
     # Connect to the server
     db = MySQLdb.connect(host='localhost',
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # create a cursor object
     cursor = db.cursor()
     
-    cursor.execute("SELECT * FROM states WHERE name like 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
     
     # Fetch all rows from the result set
     rows = cursor.fetchall()
