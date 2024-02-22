@@ -28,7 +28,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
     
     # The cursor will associate the command
-    cursor.execute("SELECT * FROM states WHERE name=%s",(search,))
+    cursor.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC",(search,))
     
     #To display the contenst of the command
     rows= cursor.fetchall()
