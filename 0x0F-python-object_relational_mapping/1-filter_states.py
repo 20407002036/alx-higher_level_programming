@@ -21,6 +21,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
+    # The like 'N% is not case sensitive
     
     # Fetch all rows from the result set
     rows = cursor.fetchall()
