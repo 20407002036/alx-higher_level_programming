@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This is the last of them all 
 By Solomon K
