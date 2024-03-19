@@ -1,5 +1,3 @@
 #!/bin/bash
-# body size of the reposnse
-if [ -z "$1" ]; then echo "Usage: $0 <URL>"; exit 1; fi
-
-response=$(curl -sI "$1"); size=$(echo -n "$response" | grep -iE '^Content-Length:' | awk '{print $2}' | tr -d '\r'); echo "$size"
+# script to get the body size of a request
+curl -Is "$1" | grep -w 'Content-Length' | cut -f2 -d' '
