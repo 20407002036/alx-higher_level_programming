@@ -1,5 +1,4 @@
-#!/bin/env bash
-
+#!/bin/bash
 # It takes a URL, sends a request to that URL, displays ize of the body of the response
 
 if [ -z "$1" ]; then
