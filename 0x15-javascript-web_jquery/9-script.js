@@ -1,5 +1,5 @@
 const $ = window.$;
-const url = "https://fourtonfish.com/hellosalut/?lang=fr";
+const url = "https://hellosalut.stefanbohacek.dev/?lang=fr";
 
 $.get(url, function(body) {
   let hello = body["hello"];
