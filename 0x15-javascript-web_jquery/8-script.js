@@ -1,5 +1,5 @@
 const $ = window.$;
-const url = "https://swapi.co/api/films/?format=json";
+const url = "https://swapi-api.alx-tools.com/api/films/?format=json";
 
 $.get(url, function(body) {
   let films = body["results"];
